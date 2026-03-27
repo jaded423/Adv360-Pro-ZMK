@@ -90,23 +90,29 @@
         &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
       >;
     };
-    extra1 { 
-      display-name = "Red";    
+    extra1 {
+      display-name = "Red";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans                                                           &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans                        &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans                      &trans &trans                                      &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans              &trans &trans  &trans &trans &trans &trans                        &trans &trans &trans &trans &trans
+      >;
+    };
+
+    extra2 {
+      display-name = "Purple";
       status = "reserved";
     };
 
-    extra2 { 
-      display-name = "Purple";    
+    extra3 {
+      display-name = "Cyan";
       status = "reserved";
     };
 
-    extra3 { 
-      display-name = "Cyan";    
-      status = "reserved";
-    };
-
-    extra4 { 
-      display-name = "Yellow";    
+    extra4 {
+      display-name = "Yellow";
       status = "reserved";
     };
   };
