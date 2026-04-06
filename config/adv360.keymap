@@ -33,6 +33,20 @@
           bindings = <&kp>, <&kp>;
       };
 
+      spc_bspc: space_backspace {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp SPACE>, <&kp BSPC>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
+      ent_del: enter_delete {
+          compatible = "zmk,behavior-mod-morph";
+          #binding-cells = <0>;
+          bindings = <&kp ENTER>, <&kp DEL>;
+          mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+
     };
 
   keymap {
@@ -65,7 +79,7 @@
         &trans &trans &trans &trans &trans &trans  &none                                           &none &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans &trans  &none        &trans &trans &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans &trans                      &trans &trans                     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans              &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans               &trans &trans &trans &trans &ent_del &spc_bspc           &trans &trans &trans  &trans  &trans
       >;
     };
     mod {
